@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB229A1D-7E6B-4922-B43C-6B5C7A9DA24A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RocketFreight</RootNamespace>
+    <AssemblyName>RocketFreight</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Build.Tasks.v4.0" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\DateTimePickerBorderless.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\ExcelHandler.cs" />
+    <Compile Include="Classes\ReportPrinter.cs" />
+    <Compile Include="Classes\Statics.cs" />
+    <Compile Include="Data\AppDBModel.cs" />
+    <Compile Include="Data\DataSeeder.cs" />
+    <Compile Include="Data\ReportDataSet.cs">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ReportDataSet.designer.cs">
+      <DependentUpon>ReportDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDialog.designer.cs">
+      <DependentUpon>frmDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDialogue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDialogue.designer.cs">
+      <DependentUpon>frmDialogue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplashScreen.designer.cs">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputControls\DateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InputControls\DateControl.Designer.cs">
+      <DependentUpon>DateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputControls\DateControlMasked.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InputControls\DateControlMasked.Designer.cs">
+      <DependentUpon>DateControlMasked.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputControls\DropDownControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InputControls\DropDownControl.Designer.cs">
+      <DependentUpon>DropDownControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputControls\DropDownControlText.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InputControls\DropDownControlText.Designer.cs">
+      <DependentUpon>DropDownControlText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputControls\TextBoxControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InputControls\TextBoxControl.Designer.cs">
+      <DependentUpon>TextBoxControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\AppInterface.cs" />
+    <Compile Include="Interface\IAppInterface.cs" />
+    <Compile Include="Models\AppEnums.cs" />
+    <Compile Include="Models\AppModels.cs" />
+    <Compile Include="Models\AppModelLists.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report Forms\ucReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Report Forms\ucReport.Designer.cs">
+      <DependentUpon>ucReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Accounts\ucCheckbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Accounts\ucCheckbox.Designer.cs">
+      <DependentUpon>ucCheckbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Accounts\ucCheckboxSingle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Accounts\ucCheckboxSingle.Designer.cs">
+      <DependentUpon>ucCheckboxSingle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Accounts\ucLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Accounts\ucLogin.Designer.cs">
+      <DependentUpon>ucLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Accounts\ucUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Accounts\ucUser.Designer.cs">
+      <DependentUpon>ucUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucImage.Designer.cs">
+      <DependentUpon>ucImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucSettings.designer.cs">
+      <DependentUpon>ucSettings.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmDialog.resx">
+      <DependentUpon>frmDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDialogue.resx">
+      <DependentUpon>frmDialogue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputControls\DateControl.resx">
+      <DependentUpon>DateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputControls\DateControlMasked.resx">
+      <DependentUpon>DateControlMasked.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputControls\DropDownControl.resx">
+      <DependentUpon>DropDownControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputControls\DropDownControlText.resx">
+      <DependentUpon>DropDownControlText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputControls\TextBoxControl.resx">
+      <DependentUpon>TextBoxControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report Forms\ucReport.resx">
+      <DependentUpon>ucReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Accounts\ucCheckbox.resx">
+      <DependentUpon>ucCheckbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Accounts\ucCheckboxSingle.resx">
+      <DependentUpon>ucCheckboxSingle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Accounts\ucLogin.resx">
+      <DependentUpon>ucLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Accounts\ucUser.resx">
+      <DependentUpon>ucUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucImage.resx">
+      <DependentUpon>ucImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucSettings.resx">
+      <DependentUpon>ucSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Data\ReportDataSet.xsc">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data\ReportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\ReportDataSet.xss">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <Resource Include="Data\RocketFreight.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pic.ico" />
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\i_main_form_bg.png" />
+    <None Include="Resources\i_top_grey.png" />
+    <None Include="Resources\i_rectangle_gray_outline.png" />
+    <None Include="Resources\i_rec_main_top.png" />
+    <None Include="Resources\i_previous_treatment.png" />
+    <None Include="Resources\i_Back.png" />
+    <None Include="Resources\export_24px.png" />
+    <None Include="Resources\error_24px.png" />
+    <None Include="Resources\database_administrator_24px.png" />
+    <None Include="Resources\dashboard_rec.png" />
+    <None Include="Resources\correct_24.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\attach_24px.png" />
+    <None Include="Resources\restart_16px.png" />
+    <None Include="Resources\i_user.png" />
+    <None Include="Resources\i_stat_icon.png" />
+    <None Include="Resources\i_search.png" />
+    <None Include="Resources\i_save_button.png" />
+    <None Include="Resources\i_red_dot.png" />
+    <None Include="Resources\i_Rectangle_red.png" />
+    <None Include="Resources\i_rectangle_blue.png" />
+    <None Include="Resources\i_rec_main_right.png" />
+    <None Include="Resources\i_rec_main_left_top.png" />
+    <None Include="Resources\i_rec_main_left_bottom.png" />
+    <None Include="Resources\i_rec_main.png" />
+    <None Include="Resources\i_Pic.png" />
+    <None Include="Resources\i_pen.png" />
+    <None Include="Resources\i_orange_dot.png" />
+    <None Include="Resources\i_node.png" />
+    <None Include="Resources\i_menu.png" />
+    <None Include="Resources\i_map.png" />
+    <None Include="Resources\i_login_button.png" />
+    <None Include="Resources\i_login_bg.png" />
+    <None Include="Resources\i_home.png" />
+    <None Include="Resources\i_envelope.png" />
+    <None Include="Resources\i_downarrow.png" />
+    <None Include="Resources\i_date_full.png" />
+    <None Include="Resources\i_date.png" />
+    <None Include="Resources\i_copy.png" />
+    <None Include="Resources\i_close.png" />
+    <None Include="Resources\i_clear.png" />
+    <None Include="Resources\i_checked_off.png" />
+    <None Include="Resources\i_checked.png" />
+    <None Include="Resources\i_change.png" />
+    <None Include="Resources\i_card.png" />
+    <None Include="Resources\i_camera.png" />
+    <None Include="Resources\i_blue_dot_1.png" />
+    <None Include="Resources\i_blue_dot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BarcodeLib">
+      <Version>1.3.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="cdmdotnet.AutoMapper">
+      <Version>1.0.16.9</Version>
+    </PackageReference>
+    <PackageReference Include="CircularProgressBar">
+      <Version>2.8.0.16</Version>
+    </PackageReference>
+    <PackageReference Include="ClosedXML">
+      <Version>0.96.0</Version>
+    </PackageReference>
+    <PackageReference Include="DocumentFormat.OpenXml">
+      <Version>2.17.1</Version>
+    </PackageReference>
+    <PackageReference Include="EntityFramework">
+      <Version>6.4.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms">
+      <Version>140.1000.523</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SqlServer.Types">
+      <Version>14.0.1016.290</Version>
+    </PackageReference>
+    <PackageReference Include="MySql.Data">
+      <Version>6.9.12</Version>
+    </PackageReference>
+    <PackageReference Include="MySql.Data.Entity">
+      <Version>6.9.9</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite">
+      <Version>1.0.118.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite.EF6">
+      <Version>1.0.118.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite.Linq">
+      <Version>1.0.118.0</Version>
+    </PackageReference>
+    <PackageReference Include="WinFormAnimation">
+      <Version>1.6.0.4</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

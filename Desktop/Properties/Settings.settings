@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RocketFreight.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConStringSQLServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server=(LocalDB)\MSSQLLocalDB;Database=RocketFreight;</Value>
+    </Setting>
+    <Setting Name="DBType" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SQLite</Value>
+    </Setting>
+    <Setting Name="ConStringMySql" Type="System.String" Scope="User">
+      <Value Profile="(Default)">server=127.0.0.1;user id=root;database=RocketFreight;</Value>
+    </Setting>
+    <Setting Name="DefaultPrinter" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DefaultFocus" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="LocalDB" Type="System.String" Scope="User">
+      <Value Profile="(Default)">data source=(LocalDB)\MSSQLLocalDB;attachdbfilename="|DataDirectory|\Data\AppDatabase.mdf";integrated security=True;connect timeout=10;MultipleActiveResultSets=True;App=EntityFramework;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
